@@ -1,11 +1,9 @@
 <?php
 /**
  * Plugin Name:       LangLock
- * Plugin URI:        https://genrolla.id/langlock
  * Description:       Keeps the Elementor layout of each language independent on multilingual sites. Translating or duplicating a page, a Theme Builder template, or any Elementor template never pulls from or overwrites the design of another language.
  * Version:           1.0.0
  * Author:            GenWork
- * Author URI:        https://genrolla.id
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       langlock

@@ -46,6 +46,6 @@ GPL-2.0-or-later
 
 ## Author
 
-GenWork - https://genrolla.id
+GenWork
 
 Elementor and WPML are trademarks of their respective owners. LangLock is an independent product and is not affiliated with, endorsed by, or sponsored by Elementor Ltd. or OnTheGoSystems.
