@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Elementor WPML Independent
- * Description:        Mencegah cross-translation sync antar bahasa untuk Elementor (Theme Builder, Templates, dan page) saat digunakan bersama WPML, sehingga konten tiap bahasa berdiri sendiri.
+ * Description:        Prevents cross-translation sync between languages for Elementor (Theme Builder, Templates, and pages) when used with WPML, so each language's content stays independent.
  * Version:           1.0.0
  * Author:            GenWork
  * License:           GPL-2.0-or-later
@@ -9,7 +9,7 @@
  * Requires PHP:      7.0
  */
 
-// Cegah akses langsung.
+// Prevent direct access.
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
