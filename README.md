@@ -1,44 +1,44 @@
 # Elementor WPML Independent
 
-Plugin helper untuk pengguna WPML + Elementor. Fungsinya menjaga agar konten Elementor tiap bahasa berdiri sendiri, sehingga ketika Anda menduplikasi atau menerjemahkan page, Theme Builder, atau Template lewat Elementor, layout dan konten antar bahasa tidak saling tarik-menarik (cross-translation sync).
+A helper plugin for users running WPML together with Elementor. It keeps the Elementor content of each language independent, so when you duplicate or translate a page, a Theme Builder template, or any Elementor template, the layout and content of one language never pull from or overwrite another (cross-translation sync).
 
-## Masalah yang diselesaikan
+## The problem it solves
 
-Saat WPML dan Elementor dipakai bersamaan, meta data Elementor sering ikut disalin dan disinkronkan antar bahasa. Akibatnya, mengubah layout di satu bahasa bisa menimpa atau menarik layout bahasa lain, terutama pada Theme Builder dan Template (`elementor_library`). Plugin ini mencegah sinkronisasi tersebut agar tiap bahasa punya tampilan yang independen.
+When WPML and Elementor are used together, Elementor meta data often gets copied and synced across languages. As a result, editing the layout in one language can overwrite or pull in the layout of another, especially for Theme Builder and templates (`elementor_library`). This plugin prevents that sync so every language keeps its own independent design.
 
-## Fitur
+## Features
 
-- Mencegah cross-translation sync meta Elementor untuk `elementor_library` (Theme Builder, Template, Header, Footer, dan sejenisnya).
-- Menyetel bahasa editor Elementor sesuai post yang sedang diedit, agar editor tidak salah mengambil konten dari bahasa lain.
-- Bekerja langsung tanpa halaman pengaturan. Cukup aktifkan.
-- Independen dari theme. Tidak perlu menambahkan kode ke `functions.php`.
+- Prevents cross-translation sync of Elementor meta for `elementor_library` (Theme Builder, templates, headers, footers, and similar).
+- Sets the Elementor editor language to match the post being edited, so the editor does not pull content from another language.
+- Works out of the box with no settings page. Just activate it.
+- Theme independent. No need to add code to `functions.php`.
 
-## Kebutuhan
+## Requirements
 
-- WordPress 5.0 atau lebih baru
-- PHP 7.0 atau lebih baru
-- Plugin Elementor
-- Plugin WPML (WPML Multilingual CMS beserta modul terkait)
+- WordPress 5.0 or newer
+- PHP 7.0 or newer
+- Elementor plugin
+- WPML plugin (WPML Multilingual CMS and its related add-ons)
 
-## Instalasi
+## Installation
 
-1. Unduh berkas `elementor-wpml-independent.zip`.
-2. Masuk ke dashboard WordPress, buka Plugins, lalu Add New.
-3. Klik Upload Plugin, pilih berkas `.zip` tersebut, lalu klik Install Now.
-4. Setelah terpasang, klik Activate.
+1. Download the `elementor-wpml-independent.zip` file.
+2. In your WordPress dashboard, go to Plugins, then Add New.
+3. Click Upload Plugin, choose the `.zip` file, then click Install Now.
+4. Once installed, click Activate.
 
-Tidak ada konfigurasi tambahan. Plugin langsung aktif bekerja setelah diaktifkan.
+No extra configuration is needed. The plugin starts working immediately after activation.
 
-## Cara pakai
+## Usage
 
-Setelah aktif, lanjutkan pekerjaan Elementor dan WPML seperti biasa. Ketika Anda menerjemahkan atau menduplikasi page maupun Theme Builder, ubah layout tiap bahasa sesuai kebutuhan. Perubahan pada satu bahasa tidak akan menimpa bahasa lain.
+After activation, keep working with Elementor and WPML as usual. When you translate or duplicate a page or a Theme Builder template, adjust the layout of each language as needed. Changes in one language will not overwrite another.
 
-## Catatan
+## Notes
 
-- Plugin ini hanya membatasi sinkronisasi untuk konteks Elementor, sehingga penerjemahan teks biasa lewat WPML tetap berjalan normal.
-- Disarankan melakukan backup sebelum melakukan perubahan besar pada layout multibahasa.
+- The plugin only limits sync within the Elementor context, so regular text translation through WPML keeps working normally.
+- It is recommended to back up your site before making large changes to multilingual layouts.
 
-## Lisensi
+## License
 
 GPL-2.0-or-later
 
