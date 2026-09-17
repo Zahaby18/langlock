@@ -1,11 +1,9 @@
 <?php
 /**
  * Plugin Name:       Elementor WPML Independent
- * Plugin URI:        https://toffeedev.com/
- * Description:        Mencegah cross-translation sync untuk elementor_library dan menyetel bahasa editor sesuai post yang diedit. Dipindah dari functions.php agar independen dari theme.
+ * Description:        Mencegah cross-translation sync antar bahasa untuk Elementor (Theme Builder, Templates, dan page) saat digunakan bersama WPML, sehingga konten tiap bahasa berdiri sendiri.
  * Version:           1.0.0
- * Author:            ToffeeDev Team
- * Author URI:        https://toffeedev.com/
+ * Author:            GenWork
  * License:           GPL-2.0-or-later
  * Requires at least: 5.0
  * Requires PHP:      7.0
