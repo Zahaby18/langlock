@@ -1,10 +1,14 @@
 <?php
 /**
- * Plugin Name:       Elementor WPML Independent
- * Description:        Prevents cross-translation sync between languages for Elementor (Theme Builder, Templates, and pages) when used with WPML, so each language's content stays independent.
+ * Plugin Name:       LangLock
+ * Plugin URI:        https://genrolla.id/langlock
+ * Description:       Keeps the Elementor layout of each language independent on multilingual sites. Translating or duplicating a page, a Theme Builder template, or any Elementor template never pulls from or overwrites the design of another language.
  * Version:           1.0.0
  * Author:            GenWork
+ * Author URI:        https://genrolla.id
  * License:           GPL-2.0-or-later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:       langlock
  * Requires at least: 5.0
  * Requires PHP:      7.0
  */
@@ -14,10 +18,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-// === WPML + Elementor: Prevent cross-translation sync (elementor_library ONLY) ===
+// Prevent cross-language sync of Elementor meta on multilingual sites.
 
-if ( ! function_exists( '_is_elementor_library_context' ) ) {
-    function _is_elementor_library_context( $meta_key, $post_id = null ) {
+if ( ! function_exists( 'langlock_is_layout_meta_context' ) ) {
+    function langlock_is_layout_meta_context( $meta_key, $post_id = null ) {
         if ( strpos( $meta_key, '_elementor' ) !== 0 ) {
             return false;
         }
@@ -35,21 +39,21 @@ if ( ! function_exists( '_is_elementor_library_context' ) ) {
 }
 
 add_filter( 'wpml_should_copy_post_meta', function ( $should_copy, $meta_key ) {
-    if ( _is_elementor_library_context( $meta_key ) ) {
+    if ( langlock_is_layout_meta_context( $meta_key ) ) {
         return false;
     }
     return $should_copy;
 }, 1, 2 );
 
 add_filter( 'wpml_post_meta_key_is_copy_once', function ( $copy_once, $meta_key ) {
-    if ( _is_elementor_library_context( $meta_key ) ) {
+    if ( langlock_is_layout_meta_context( $meta_key ) ) {
         return false;
     }
     return $copy_once;
 }, 1, 2 );
 
 add_filter( 'wpml_custom_field_values_for_post_signature', function ( $value, $meta_key ) {
-    if ( _is_elementor_library_context( $meta_key ) ) {
+    if ( langlock_is_layout_meta_context( $meta_key ) ) {
         return null;
     }
     return $value;
